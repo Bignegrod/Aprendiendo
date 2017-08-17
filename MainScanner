@@ -1,0 +1,41 @@
+package ej3;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author duoc
+ */
+public class Ej3 {
+
+    
+    public static void main(String[] args) {
+        
+        Scanner man= new Scanner(System.in);
+        
+        System.out.println("Ingrese numero Mantencion");
+        int num = man.nextInt();
+        System.out.println("Rut Cliente");
+        String rut=man.next();
+        System.out.println("Descrpcion");
+        String desc=man.next();
+        System.out.println("Valor UF");
+       float valor=man.nextFloat();
+        System.out.println("¿Esta Certificado?");
+        boolean certi=man.nextBoolean();
+        System.out.println("Ingrese Jornada de Visita");
+        char jor=man.next().charAt(0);
+        System.out.println("Ingrese Nombre del empleado");
+        String emplo=man.next();
+        
+        
+        Mantencion m1= new Mantencion(num, rut, desc, valor, certi, jor, emplo);
+        
+        m1.printmantencion();
+        
+        
+        
+       
+    }
+    
+}

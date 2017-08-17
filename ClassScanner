@@ -1,0 +1,122 @@
+package ej3;
+
+/**
+ *
+ * @author duoc
+ */
+@SuppressWarnings("empty-statement")
+public class Mantencion {
+    
+    private int numeroMantencion;
+    private String rutCliente;
+    private String descripcion;
+    private float valorUf;
+    private boolean estaCertificado;
+    private char jornadaVisita;
+    private String empleado;
+    
+    
+    public Mantencion(){
+    this.numeroMantencion=0;
+    this.rutCliente="";
+    this.descripcion="";
+    this.valorUf=0f;
+    this.estaCertificado=true;
+    this.jornadaVisita=' ';
+    this.empleado="";
+        
+    }
+        
+public Mantencion(int numeroMantencion,String rutCliente, String descripcion, float valorUf, boolean estaCertificado, char jornadaVisita, String empleado  ){
+
+    setNumeroMantencion(numeroMantencion);
+    setRutCliente(rutCliente);
+    setDescripcion(descripcion);
+    setValorUf(valorUf);
+    setEstaCertificado(estaCertificado);
+    setJornadaVisita(jornadaVisita);
+    setEmpleado(empleado);
+    
+    
+    
+
+}
+
+    public int getNumeroMantencion() {
+        return numeroMantencion;
+    }
+
+    public void setNumeroMantencion(int numeroMantencion) {
+        this.numeroMantencion = numeroMantencion;
+    }
+
+    public String getRutCliente() {
+        return rutCliente;
+    }
+
+    public void setRutCliente(String rutCliente) {
+        this.rutCliente = rutCliente;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public float getValorUf() {
+        return valorUf;
+    }
+
+    public void setValorUf(float valorUf) {
+        
+ 
+        this.valorUf = valorUf;
+         
+            
+          
+   
+           
+    }
+
+    public boolean isEstaCertificado() {
+        return estaCertificado;
+    }
+
+    public void setEstaCertificado(boolean estaCertificado) {
+        this.estaCertificado = estaCertificado;
+    }
+
+    public char getJornadaVisita() {
+        return jornadaVisita;
+    }
+
+    public void setJornadaVisita(char jornadaVisita) {
+        this.jornadaVisita = jornadaVisita;
+    }
+
+    public String getEmpleado() {
+        return empleado;
+    }
+
+    public void setEmpleado(String empleado) {
+        this.empleado = empleado;
+    }
+    
+    
+    public void printmantencion(){
+        System.out.println("Ingrese numero de mantencion" +getNumeroMantencion());
+        System.out.println("Rut del Cliente" +getRutCliente());
+        System.out.println("Descripcion"+getDescripcion());
+        System.out.println("ValorUf"+getValorUf());
+        System.out.println("¿Esta certificado?"+isEstaCertificado());
+        System.out.println("Jornada de la Visita"+getJornadaVisita());
+        System.out.println("Nombre del Empleado"+getEmpleado());
+
+}
+
+   
+    
+}

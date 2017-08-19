@@ -1,10 +1,5 @@
-package ej3;
 
-/**
- *
- * @author duoc
- */
-@SuppressWarnings("empty-statement")
+
 public class Mantencion {
     
     private int numeroMantencion;

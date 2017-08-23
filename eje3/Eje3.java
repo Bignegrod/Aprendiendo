@@ -30,8 +30,8 @@ public class Eje3 {
         System.out.println("Ingrese cantidad de copias disponibles");
         int cop=li.nextInt();
         
-        Libro ca =new Libro(num_Isbn, tit, comp, edi, an, es, pr, ca, col, cop);
-       ca.printlibro();
+       Libro jota =new Libro(num_Isbn, tit, comp, edi, an, es, pr, ca, col, cop);
+       jota.printlibro();
     }
     
     

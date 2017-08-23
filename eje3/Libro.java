@@ -186,7 +186,12 @@ public class Libro {
             System.out.println("Escrito en español:No");
         }
         
-        
+        if (getColecc()=='S' || getColecc()=='s'){
+            System.out.println("Es de coleccion:Si");
+        }else{
+            
+            System.out.println("Es de coleccion:No");
+        }
     }
     
     

@@ -1,0 +1,44 @@
+package farmacia;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author duoc
+ */
+public class Farmacia {
+
+    
+    public static void main(String[] args) {
+        Scanner pp =new Scanner (System.in);
+        
+        System.out.println("Ingrese identificador del medicamento");
+        String id=pp.nextLine();
+        System.out.println("Ingrese tipo de medicamento");
+        String ti=pp.nextLine();
+        System.out.println("Ingrese el Stock del medicamento");
+        int st=pp.nextInt();
+        System.out.println("Ingrese precio del medicamento");
+        float pr=pp.nextFloat();
+        System.out.println("Ingrese si viene con receta");
+        char rec=pp.next().charAt(0);
+        System.out.println("Es Bioequivalente");
+        boolean bio=pp.nextBoolean();
+        
+        
+    
+        Medicamento mm1=new Medicamento(id, ti, st, pr, rec, bio);
+        
+        
+        mm1.Imprimir();
+        String rr = mm1.retornodatos();
+        System.out.println("Datos:"+rr);
+       
+                
+        
+         }
+        
+       
+    
+    
+}

@@ -1,0 +1,123 @@
+package farmacia;
+
+public class Medicamento {
+    
+    
+    private String identificador;
+    private String tipo;
+    private int stock;
+    private float precio;
+    private char receta;
+    private boolean Bioquivalente;
+
+    public Medicamento() {
+         this.identificador = " ";
+         this.tipo="";
+        this.stock = 0;
+        this.precio = 0f;
+        this.receta = ' ';
+        this.Bioquivalente = true;
+    }
+
+    public Medicamento(String identificador,String tipo, int stock, float precio, char receta, boolean Bioquivalente) {
+        setIdentificador(identificador);
+        setTipo(tipo);
+        setStock(stock);
+        setPrecio ( precio);
+        setReceta (receta);
+        setBioquivalente ( Bioquivalente);
+    }
+
+    public String getIdentificador() {
+        return identificador;
+    }
+
+    public void setIdentificador(String identificador) {
+       
+        this.identificador = identificador;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+         if(tipo.trim().length()>0)
+        this.tipo = tipo.toUpperCase();
+        else 
+        System.out.println("Error: Ingrese un tipo correcto");
+    }
+
+    public int getStock() {
+        return stock;
+    }
+
+    public void setStock(int stock) {
+        if(stock>1 && stock<5000)
+    
+        this.stock = stock;
+        else
+        System.out.println("Error:Ingrese un Stock entre 1 y 50000");
+    }
+
+    public float getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(float precio) {
+        if(precio>120.8)
+        this.precio = precio;
+        else
+            System.out.println("Error:Ingrese un precio correcto");
+    }
+
+    public char getReceta() {
+        return receta;
+    }
+
+    public void setReceta(char receta) {
+        if(receta=='S'|| receta=='s' ||receta=='n'|| receta=='N')
+        this.receta = receta;
+        else
+                System.out.println("Error:Ingrese un dato");
+    }
+
+    public boolean isBioquivalente() {
+        return Bioquivalente;
+    }
+
+    public void setBioquivalente(boolean Bioquivalente) {
+        this.Bioquivalente = Bioquivalente;
+        
+        
+    }
+    
+    public void Imprimir(){
+        System.out.println("Identificador:"+getIdentificador());        
+        System.out.println("Tipo:"+getTipo());
+        System.out.println("Stock:"+getStock());
+        System.out.println("Precio:"+getPrecio());
+        if(receta=='S' || receta=='s')
+            System.out.println("Receta:Si");
+        else
+            System.out.println("Receta:No");
+        if(isBioquivalente())
+            System.out.println("Bioequivalente:Verdadero");
+        else
+            System.out.println("Bioequivalente:falso");
+        
+    }
+        
+    public String retornodatos(){
+    
+        String datos=" ";
+        
+        datos = getTipo() +","+getStock()+ ","+getPrecio(); 
+        return datos;
+    
+    
+}
+        
+    
+    
+}

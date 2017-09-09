@@ -115,6 +115,21 @@ public class Abono {
         //es forzar el float a int
     }
     
-    
+    public void verFicha()
+    {
+        System.out.println("**********************");
+        System.out.println("    Aboado:"+getAbon().getNombreCom());
+        System.out.println("**********************");
+        System.out.println("Abono Semestral:"+getValorAs());
+        System.out.println("**********************");
+        System.out.println("Cantidad de funciones"+getFunciones()+"Funciones");
+        System.out.println("**********************");
+        
+    }
+    public int saldoFunciones(int cantAs)
+    {
+        int saldo=0;
+        saldo=getFunciones()-cantAs;
+        return saldo;
+    }
 }
-

@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package teatro;
 
 
@@ -98,8 +93,27 @@ public class Abonado {
         System.out.println("Nombre Completo:"+getNombreCom());
         System.out.println("Celular:"+getCelular());
         System.out.println("Email:"+getEmail());
-        System.out.println("Tipo:"+getTipo());
+        System.out.println("Es activo:"+isActivo());
+        
+        if(tipo=='p'||tipo=='P')
+            System.out.println("Tipo:Preferente");
+        else
+            System.out.println("Tipo:Estandar");
         
     }
-            
+        
+public float reservarPalco(int precioNormal, float desc)
+{
+    float precioReserva=0f;
+    
+    if(isActivo())
+    {
+        precioReserva=precioNormal-(precioNormal*desc/100);
+        
+    }
+    else{
+        precioReserva=precioNormal;
+    }
+    return precioReserva;
+}
 }

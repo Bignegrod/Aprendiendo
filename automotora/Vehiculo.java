@@ -17,7 +17,7 @@ package automotora;
         this.precio=0;
         this.transmision=' ';
         this.kilometraje=0;
-        this.proveedor= new Distribuidor();
+        
         
         
         
@@ -121,23 +121,24 @@ package automotora;
     }
     
     
+//   public String detalle(){//no resive parametros pq tiene todos los datos como aributo
+//      
+//       return getPatente()+"-"+getTipo()+"-"+getProveedor().getNombre();
+//   }
    public String detalle(){//no resive parametros pq tiene todos los datos como aributo
-      
-       return getPatente()+"-"+getTipo()+"-"+getProveedor().getNombre();
-   }
-//    public String detalle(){//no resive parametros pq tiene todos los datos como aributo
-//      String retornar=null;
-//      retornar=getPatente()+"-"+getTipo()+"-"+getProveedor().getNombre();
-//       return retornar
+      String retornar=null;
+     retornar=getPatente()+"-"+getTipo()+"-"+getProveedor().getNombre();
+      return retornar;
+      }
    
-  public float precioVenta(float utilidad, float iva){
+  public float precioVenta( float iva){
       float precio_venta=0f;
-      float monto_utilidad=0f;
+    
       float monto_iva=0f;
       
-      monto_utilidad=getPrecio()*utilidad/100;
-      monto_iva=getPrecio()*iva/100;
-      precio_venta=getPrecio()+monto_utilidad+monto_iva;
+      
+      monto_iva=getPrecio()+(getPrecio()*iva/100);
+      precio_venta=monto_iva;
       return precio_venta;
   }
   public float consumoBencina(float bencina, float kilometros){
@@ -193,5 +194,3 @@ package automotora;
  }
         
   }
-  
-  

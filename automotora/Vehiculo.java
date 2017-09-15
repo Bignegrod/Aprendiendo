@@ -133,7 +133,9 @@ package automotora;
    
   public float precioVenta( float iva){
       float precio_venta=0f;
-    
+    /*
+    aqui se supone que iba precico de utilidad y toda la zorra pero lo elimine y puse que solo le agregaba el iva 
+    pq la profe habia echo el ejercicio mal me daba como 1 billon y eso*/
       float monto_iva=0f;
       
       

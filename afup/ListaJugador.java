@@ -91,4 +91,48 @@ public class ListaJugador {
         }
         return cantidad;
     }
+     public int cantidadExtranjeros(String nombreEquipo)
+    {
+        int cantidad=0;
+        for(Jugador extra: futbolista)
+        {
+            if(!(extra.getNacionalidad().equalsIgnoreCase("Chileno"))
+                    && extra.getGenero().equalsIgnoreCase("masculino")
+                    && extra.getEqui().getNombre().equalsIgnoreCase(nombreEquipo)){
+                cantidad++;
+            }
+                    
+        } return cantidad;
+    }
+    public void eliminarJugador(int numeroJug)
+    {
+        boolean encontrado=false;
+        for(Jugador eliminar:futbolista)
+        {
+            if(eliminar.getNumUnico()==numeroJug)
+            {
+                futbolista.remove(eliminar);
+                encontrado=true;
+                System.out.println("Jugador Eliminado");
+            }
+        }
+        //opcion 2
+        /*
+        for(int i=0; i <futbolista.size();i++)
+        {
+            if(futbolista.get(i).getNumUnico()==numeroJug)
+            {
+                futbolista.remove(i);
+                encontrado=true;
+                System.out.println("Jugador Eliminado");
+            }
+        }
+        if(encontrado==false)
+        {
+            System.out.println("Jugador no encontrado");
+        }
+    }
+*/
+    }
+}
 }
